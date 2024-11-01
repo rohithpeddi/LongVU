@@ -856,11 +856,11 @@ class CambrianMetaForCausalLM(ABC):
             bs = image_aux_features_list[0].shape[0]
             dtype = new_image_aux_list[0].dtype
 
-            frame_sizes = []
-            for i in range(len(image_sizes)):
-                for j in range(split_sizes[i]):
-                    frame_sizes.append(image_sizes[i])
-            image_sizes = frame_sizes
+            # frame_sizes = []
+            # for i in range(len(image_sizes)):
+            #     for j in range(split_sizes[i]):
+            #         frame_sizes.append(image_sizes[i])
+            # image_sizes = frame_sizes
         else:
             image_aux_features_list = self.encode_images(image_aux_list)
             bs = image_aux_list[0].shape[0]
