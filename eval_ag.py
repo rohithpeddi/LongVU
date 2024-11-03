@@ -60,7 +60,7 @@ class VideoCaptionGenerator:
                 image_sizes=image_sizes,
                 do_sample=False,
                 temperature=0.2,
-                max_new_tokens=256,
+                max_new_tokens=384,
                 use_cache=True,
                 stopping_criteria=[stopping_criteria],
             )
@@ -84,7 +84,7 @@ class VideoCaptionGenerator:
             output_file = os.path.join(output_dir, f"{base_name}_caption.txt")
             with open(output_file, 'w') as f_out:
                 f_out.write(caption)
-            print(f"Caption for {video_file} - {caption} written to {output_file}\n")
+            print(f"Caption for {video_file} written to {output_file}\n")
 
 
 def main():
